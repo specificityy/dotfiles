@@ -1,1 +1,4 @@
-/Users/wilson.jimenez/.gitignore_global
+*.swp
+*.swo
+*.orig
+*.vim

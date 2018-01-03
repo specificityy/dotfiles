@@ -1,1 +1,23 @@
-/Users/wilson.jimenez/.gitconfig
+[user]
+	name = Wilson Jimenez
+	email = wilsonhjimenez@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = vim
+	excludesfile = /Users/wilson.jimenez/.gitignore_global
+	whitespace = trailing-space,-space-before-tab,tab-in-indent,cr-at-eol
+[credential]
+[alias]
+	gs = status
+	co = checkout
+	br = branch
+	ci = commit
+	cia = commit -am
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[pull]
+	rebase = true

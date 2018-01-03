@@ -1,1 +1,0 @@
-/Users/wilson.jimenez/.vimrc
