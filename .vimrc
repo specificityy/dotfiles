@@ -1,5 +1,3 @@
-set nocompatible              "For using the latest Vim settings/options
-
 so ~/.vim/plugins.vim
 
 syntax enable
@@ -11,10 +9,11 @@ set noerrorbells visualbell t_vb=
 
 
 "-----------Visuals-----------
-" colorscheme molokai
-set background=dark
+syntax on
+let g:solarized_termtrans=1
 let g:solarized_termcolors=256
-colorscheme wombat
+set background=dark
+colorscheme vim-material
 
 let g:one_allow_italics = 1     "Italic for comments
 
@@ -28,7 +27,7 @@ set expandtab									 "Set tab to spaces
 set softtabstop=2
 set shiftwidth=2               "for when indenting with '>', use 2 spaces width
 set clipboard=unnamed          "Be able to use normal copy/paste on Visual and Normal mode
-"set noexpandtab                "No expand tabs
+"set noexpandtab               "No expand tabs
 
 "Remove scroll bar for non vertical split and vertical split window
 set guioptions=l
@@ -40,7 +39,6 @@ set guioptions=R
 hi LineNr guibg=bg
 "Removes split border
 hi vertsplit guifg=bg guifg=bg
-
 
 "-----------Searching-----------
 set hlsearch
@@ -97,20 +95,45 @@ nmap <c-e> :CtrlPMRUFiles<cr>
 
 
 "\
-"\ vim jsx 
+"\ vim-jsx
 "\
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
+" set filetype=javascript.jsx
+let g:jsx_ext_required = 0
+
 
 "\
 "\ NERDTree
 "\
 let NERDTreeHijackNetrw = 0
 
+
 "\
 "\ Greplace.vim
 "\
 set grepprg=ag                                       "Use Ag for the search
 let g:grep_cmd_opts = '--line-numbers --noheading'
+
+
+"\
+"\ vim-less
+"\
+nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+
+"\
+"\ vim-prettier
+"\
+nmap <Leader>p :Prettier<cr>
+
+let g:prettier#config#bracket_spacing = 'true'         " print spaces between brackets
+let g:prettier#config#jsx_bracket_same_line = 'true'   " put > on the last line instead of new line
+
+
+"\
+"\ vim-airline
+"\
+let g:airline#extensions#branch#displayed_head_limit = 10
 
 
 "----------Auto-Commands---------
