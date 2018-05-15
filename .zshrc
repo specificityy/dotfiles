@@ -85,7 +85,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ll="ls -lha"
 alias ..="cd .."
-alias webapp="docker start aaf; docker start b29; cd ~/projects/webapp/ && ./bash_scripts/start_webapp.sh"
+alias webapp="cd ~/projects/webapp/ && ./bash_scripts/start_webapp.sh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/wilson.jimenez/.sdkman"
@@ -98,6 +98,7 @@ export JAVA_HOME;
 # export FX_MYSQL_PASSWORD='some_password'
 # export FX_MYSQL_USER='webapp'
 
-export FX_MYSQL_URI='jdbc:mysql://localhost:13306/fx?characterEncoding=UTF-8&rewriteBatchedStatements=true'
+export FX_MYSQL_URI='jdbc:mysql://localhost:3306/fx?characterEncoding=UTF-8&rewriteBatchedStatements=true'
 export FX_MYSQL_USER=root
 export FX_MYSQL_PASSWORD=Kalamaja123
+export GITHUB_TOKEN=3d086ee70e4550c726111aefcc5540a4dcfed3ce
