@@ -85,20 +85,15 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ll="ls -lha"
 alias ..="cd .."
-alias webapp="cd ~/projects/webapp/ && ./bash_scripts/start_webapp.sh"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/wilson.jimenez/.sdkman"
-[[ -s "/Users/wilson.jimenez/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/wilson.jimenez/.sdkman/bin/sdkman-init.sh"
+# QMetric specific
+alias restartflow="./node_modules/.bin/flow stop; yarn flow:watch"
+alias restartservices="cd ~/Projects/fe-dev-environment; docker-compose down; ./start.sh; sleep 1; ./start.sh; docker-compose ps"
+alias startbubbles="cd ~/automation; osascript bubbles_terminal-tab.scpt"
+alias startwebbackend="cd ~/automation; osascript mojo-jojo_and_fuzzylumpkins_terminal-tab.scpt"
+# alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt && startwebbackend && startbubbles"
+alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt && restartservices && sleep 1 && startbubbles && startwebbackend && bubbles"
+# alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt"
+alias bubbles="cd ~/Projects/bubbles"
 
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home
-export JAVA_HOME;
-
-# export FX_MYSQL_URI='jdbc:spy:jdbc:mysql://localhost:13306/fx?characterEncoding=UTF-8'
-# export FX_MYSQL_PASSWORD='some_password'
-# export FX_MYSQL_USER='webapp'
-
-export FX_MYSQL_URI='jdbc:mysql://localhost:3306/fx?characterEncoding=UTF-8&rewriteBatchedStatements=true'
-export FX_MYSQL_USER=root
-export FX_MYSQL_PASSWORD=Kalamaja123
-export GITHUB_TOKEN=3d086ee70e4550c726111aefcc5540a4dcfed3ce
+source ~/.qmg_secrets
