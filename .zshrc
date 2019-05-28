@@ -86,6 +86,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ll="ls -lha"
 alias ..="cd .."
 
+
 # QMetric specific
 alias restartflow="./node_modules/.bin/flow stop; yarn flow:watch"
 alias restartservices="cd ~/Projects/fe-dev-environment; docker-compose down; ./start.sh; sleep 1; ./start.sh; docker-compose ps"
@@ -95,5 +96,3 @@ alias startwebbackend="cd ~/automation; osascript mojo-jojo_and_fuzzylumpkins_te
 alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt && restartservices && sleep 1 && startbubbles && startwebbackend && bubbles"
 # alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt"
 alias bubbles="cd ~/Projects/bubbles"
-
-source ~/.qmg_secrets

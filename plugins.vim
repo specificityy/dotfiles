@@ -30,6 +30,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mhinz/vim-startify'
 Plugin 'groenewege/vim-less'
 Plugin 'prettier/vim-prettier'
+Plugin 'HerringtonDarkholme/yats.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
