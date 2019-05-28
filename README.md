@@ -9,8 +9,8 @@
 - ⌨️ [iTerm](https://www.iterm2.com/downloads.html)
   - Download and import the [Monokai Remastered](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Monokai%20Remastered.itermcolors) color scheme
   - On Profiles
-    - Set transparency to ~50%
-    - Set blur to ~65%
+    - Set transparency to ~10%
+    - Set blur to ~12%
   - On Keys
     - Set `next pane` shortcut to ⌃⌥ + L
     - Set `prev pane` shortcut to ⌃⌥ + H
@@ -35,3 +35,8 @@
   - `.zshrc`
   - `~/.oh-my-zsh/themes/robbyrussel.robbyrussell.zsh-theme`
   - `~/Projects/dotfiles/plugins.vim`
+  
+  
+### The end result 🚀
+
+![Vim - Material-Monokai](./vim-material-monokai.png)

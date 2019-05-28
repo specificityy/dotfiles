@@ -31,6 +31,8 @@ Plugin 'mhinz/vim-startify'
 Plugin 'groenewege/vim-less'
 Plugin 'prettier/vim-prettier'
 Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'skielbasa/vim-material-monokai'
+Plugin 'phanviet/vim-monokai-pro'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

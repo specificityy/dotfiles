@@ -10,10 +10,12 @@ set noerrorbells visualbell t_vb=
 
 "-----------Visuals-----------
 syntax on
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
 set background=dark
-colorscheme vim-material
+set termguicolors
+colorscheme material-monokai
+let g:materialmonokai_italic=1
+let g:materialmonokai_subtle_spell=1 " Enable subtle Spell highlighting:
+let g:materialmonokai_custom_lint_indicators=0 " Disable the custom ALE indicators if you want to set your own or like the default ones
 
 let g:one_allow_italics = 1     "Italic for comments
 
