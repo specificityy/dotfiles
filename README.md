@@ -9,8 +9,12 @@
 - ⌨️ [iTerm](https://www.iterm2.com/downloads.html)
   - Download and import the [Monokai Remastered](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Monokai%20Remastered.itermcolors) color scheme
   - On Profiles
-    - Set transparency to ~10%
-    - Set blur to ~12%
+    - For the Default one
+      - Set transparency to ~45%
+      - Set blur to ~12%
+    - Create a new one called Vim
+        - Set shortcut key to ⌃⌘ + V
+        - Set transparency to ~10%
   - On Keys
     - Set `next pane` shortcut to ⌃⌥ + L
     - Set `prev pane` shortcut to ⌃⌥ + H

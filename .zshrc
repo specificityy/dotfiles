@@ -90,9 +90,14 @@ alias ..="cd .."
 # QMetric specific
 alias restartflow="./node_modules/.bin/flow stop; yarn flow:watch"
 alias restartservices="cd ~/Projects/fe-dev-environment; docker-compose down; ./start.sh; sleep 3; ./start.sh; docker-compose ps"
-alias startbubbles="cd ~/automation; osascript bubbles_terminal-tab.scpt"
-alias startwebbackend="cd ~/automation; osascript mojo-jojo_and_fuzzylumpkins_terminal-tab.scpt"
+alias startbubbles="cd ~/automation; osascript bubbles_terminal-tab.scpt; fedenv"
+alias startwebbackend="cd ~/automation; osascript mojo-jojo_and_fuzzylumpkins_terminal-tab.scpt; fedenv"
 # alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt && startwebbackend && startbubbles"
-alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt && restartservices && sleep 1 && startbubbles && startwebbackend && cd ~/Projects/fe-dev-environment"
+alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt; restartservices; sleep 1; startbubbles; startwebbackend; fedenv"
 # alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt"
 alias bubbles="cd ~/Projects/bubbles"
+alias fedenv="cd ~/Projects/fe-dev-environment"
+
+source ~/.qmg_secrets
+
+export PATH=~/.npm-global/bin:$PATH
