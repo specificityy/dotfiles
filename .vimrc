@@ -21,6 +21,7 @@ let g:one_allow_italics = 1     "Italic for comments
 
 set t_CO=256
 set guifont=Menlo:h14
+" set transparency=10
 " set guioptions-=e           "Disables GUI tabs
 
 set linespace=8               "Macvim-specific line-height
@@ -30,6 +31,8 @@ set softtabstop=2
 set shiftwidth=2               "for when indenting with '>', use 2 spaces width
 set clipboard=unnamed          "Be able to use normal copy/paste on Visual and Normal mode
 "set noexpandtab               "No expand tabs
+set wildignore=*.swp,*.swo     "Files matching these patterns are ignored when completing file or directory names,
+                               "and influences the result of expand(), glob() and globpath() unless a flag is passed to disable this.
 
 "Remove scroll bar for non vertical split and vertical split window
 set guioptions=l
@@ -72,6 +75,9 @@ nmap <Leader><space> :nohlsearch<cr>
 "Make NERDTree easier to toggle
 nmap <D-1> :NERDTreeToggle<cr>
 nmap <D-r> :NERDTreeFind<cr>
+
+"Format the whole document and go back to prev cursor position
+nmap <silent> <Leader>f mj gg V G = 'j :delmarks j<cr>
 
 "Resize tabs horizontally by 10%
 nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 11/10)<CR>
@@ -131,6 +137,8 @@ nmap <Leader>p :Prettier<cr>
 let g:prettier#config#bracket_spacing = 'true'         " print spaces between brackets
 let g:prettier#config#jsx_bracket_same_line = 'true'   " put > on the last line instead of new line
 
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 "\
 "\ vim-airline

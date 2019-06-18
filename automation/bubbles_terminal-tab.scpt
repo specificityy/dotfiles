@@ -3,7 +3,7 @@
 -- List actions to perform
 set actions to {¬
 	{action:"cd ~/Projects/bubbles; yarn test:unit:watch"}, ¬
-	{action:"cd ~/Projects/bubbles; restartflow"}, ¬
+	{action:"cd ~/Projects/bubbles; rsflow"}, ¬
 	{action:"cd ~/Projects/bubbles; yarn lint:watch"}, ¬
 	{action:"cd ~/Projects/bubbles; yarn start:local"} ¬
 }
@@ -21,6 +21,7 @@ tell application "iTerm"
 
 	-- Split in 2 vertical panes
   tell session 1 of current tab of current window
+    set name to "🦄 Bubbles"
     split vertically with default profile
   end tell
 	
@@ -39,10 +40,12 @@ tell application "iTerm"
 		end tell
 	end repeat
 
-  -- Have to wait until the above commands are fired before setting the tab name or it gets overwritten
-  delay 3
-  tell session 1 of current tab of current window
-    set name to "🦄 Bubbles"
-  end tell
+-- Have to wait until the above commands are fired before setting the tab name or it gets overwritten by the command being run
+delay 1
+  repeat with i from 1 to 4
+    tell session i of current tab of current window
+      set name to "🦄 Bubbles"
+    end tell
+  end repeat
 
 end tell

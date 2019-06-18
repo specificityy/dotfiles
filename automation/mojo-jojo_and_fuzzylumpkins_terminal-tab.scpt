@@ -56,8 +56,11 @@ tell application "iTerm"
 		end tell
 	end repeat
 
-  -- Set the tab name
-  tell session 1 of current tab of current window
-    set name to "😈 Mojo & Fuzzy"
-  end tell
+-- Have to wait until the above commands are fired before setting the tab name or it gets overwritten by the command being run
+  delay 1
+  repeat with i from 1 to 4
+    tell session i of current tab of current window
+      set name to "🎃 Mojo & Fuzzy"
+    end tell
+  end repeat
 end tell
