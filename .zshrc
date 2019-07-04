@@ -96,6 +96,7 @@ alias startbubbles="cd ~/automation; osascript bubbles_terminal-tab.scpt; fedenv
 alias startblossom="cd ~/automation; osascript dev_blossom.scpt; fedenv"
 alias startwebbackend="fedenv; ./start.sh; cd ~/automation; osascript mojo-jojo_and_fuzzylumpkins_terminal-tab.scpt; fedenv"
 alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt; rsservices; sleep 1; startbubbles; startwebbackend; fedenv"
+alias aggs_enquiry="cd ~/Projects/dooku; ./quote | xmllint --xpath 'string(//aggregatorResponse/quote/link)' - | sed 's/entrypoint.website.playground.internal.qmetric.co.uk/localhost:8086/' | xargs open -a \"Google Chrome\""
 
 source ~/.qmg_secrets
 
