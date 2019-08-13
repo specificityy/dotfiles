@@ -2,12 +2,10 @@
 
 -- List actions to perform
 set actions to {¬
-	{action:"cd ~/pe/blossom; yarn test:unit:watch"}, ¬
-	{action:"cd ~/pe/blossom; ./node_modules/.bin/flow stop; yarn flow:watch"}, ¬
-	{action:"cd ~/pe/blossom; yarn lint:watch"}, ¬
-	{action:"cd ~/pe/blossom; yarn start:local"}, ¬
-	{action:"cd ~/pe/him; yarn build; yarn start"}, ¬
-	{action:"cd ~/pe/fuzzylumpkins; yarn build; yarn start"} ¬
+  {action:"cd ~/Projects/blossom; yarn test:unit:watch"}, ¬
+  {action:"cd ~/Projects/blossom; rsflow"}, ¬
+  {action:"cd ~/Projects/blossom; yarn lint:watch"}, ¬
+  {action:"cd ~/Projects/blossom; yarn start:local"} ¬
 }
 -- Count number of actions
 set num_actions to count of actions
@@ -28,7 +26,7 @@ tell application "iTerm"
   end tell
 	
 	-- Split right vertical pane in 3
-  repeat with i from 2 to 5
+  repeat with i from 2 to 3
 	  set sessionId to i
     tell session sessionId of current tab of current window
       split horizontally with default profile

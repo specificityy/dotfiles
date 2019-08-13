@@ -4,14 +4,16 @@
 set actions to {¬
 	{action:"cd ~/Projects/mojo-jojo; yarn build:watch"}, ¬
 	{action:"cd ~/Projects/fuzzylumpkins; yarn build:watch"}, ¬
-	{action:"cd ~/Projects/mojo-jojo; yarn start:watch"}, ¬
-	{action:"cd ~/Projects/fuzzylumpkins; yarn start:watch"} ¬
+  {action:"cd ~/Projects/him; yarn build:watch"}, ¬
+  {action:"cd ~/Projects/mojo-jojo; yarn start:watch"}, ¬
+  {action:"cd ~/Projects/fuzzylumpkins; yarn start:watch"}, ¬
+  {action:"cd ~/Projects/him; yarn start:watch"} ¬
 }
 -- Count number of actions
 set num_actions to count of actions
 
 -- Set cols and lines
-set num_cols to round (num_actions ^ 0.5)
+set num_cols to round (num_actions / 2)
 set num_lines to round (num_actions / num_cols) rounding up
 
 -- Start iTerm
@@ -58,9 +60,9 @@ tell application "iTerm"
 
 -- Have to wait until the above commands are fired before setting the tab name or it gets overwritten by the command being run
   delay 1
-  repeat with i from 1 to 4
+  repeat with i from 1 to num_actions
     tell session i of current tab of current window
-      set name to "🎃 Mojo & Fuzzy"
+      set name to "🎃 Mojo, Him, Fuzzy"
     end tell
   end repeat
 end tell
