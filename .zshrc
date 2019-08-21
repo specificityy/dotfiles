@@ -92,12 +92,14 @@ alias bubbles="cd ~/Projects/bubbles"
 alias fedenv="cd ~/Projects/fe-dev-environment"
 alias rsflow="./node_modules/.bin/flow stop; yarn flow:watch"
 alias rsservices="fedenv; docker-compose down; ./start.sh; docker-compose ps"
-alias startbubbles="cd ~/automation; osascript bubbles_terminal-tab.scpt"
-alias startblossom="cd ~/automation; osascript dev_blossom.scpt"
+alias startbubbles="cd ~/automation; osascript bubbles_terminal-tab.scpt; bubbles"
+alias startblossom="cd ~/automation; osascript dev_blossom.scpt; cd ~/Projects/blossom"
 alias startwebbackend="fedenv; ./start.sh; cd ~/automation; osascript mojo-jojo_and_fuzzylumpkins_terminal-tab.scpt; fedenv"
 alias morningcoffee="cd ~/automation; osascript close-terminal-tabs-and-sessions.scpt; rsservices; sleep 1; startbubbles; startwebbackend; fedenv"
 alias aggs_local_enquiry="cd ~/Projects/dooku; ./quote | xmllint --xpath 'string(//aggregatorResponse/quote/link)' - | sed 's/entrypoint.website.playground.internal.qmetric.co.uk/localhost:8086/' | xargs open -a \"Google Chrome\""
 alias aggs_playground_enquiry="cd ~/Projects/dooku; ./quote | xmllint --xpath 'string(//aggregatorResponse/quote/link)' - | xargs open -a \"Google Chrome\""
+alias drstrange="curl -X PUT --data 'P2D' http://localhost:9543/rewindableClock"
+alias drstrange_rollback="curl -X PUT --data 'P0D' http://localhost:9543/rewindableClock"
 
 source ~/.qmg_secrets
 

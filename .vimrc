@@ -21,7 +21,7 @@ let g:one_allow_italics = 1     "Italic for comments
 
 set t_CO=256
 set guifont=Menlo:h14
-" set transparency=10
+set transparency=15
 " set guioptions-=e           "Disables GUI tabs
 
 set linespace=8               "Macvim-specific line-height
