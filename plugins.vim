@@ -33,6 +33,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'skielbasa/vim-material-monokai'
 Plugin 'phanviet/vim-monokai-pro'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
