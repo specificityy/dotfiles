@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/wilson.jimenez/.oh-my-zsh
+export ZSH=/Users/specificityy/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -100,8 +100,6 @@ alias aggs_local_enquiry="cd ~/Projects/dooku; ./quote | xmllint --xpath 'string
 alias aggs_playground_enquiry="cd ~/Projects/dooku; ./quote | xmllint --xpath 'string(//aggregatorResponse/quote/link)' - | xargs open -a \"Google Chrome\""
 alias drstrange="curl -X PUT --data 'P2D' http://localhost:9543/rewindableClock"
 alias drstrange_rollback="curl -X PUT --data 'P0D' http://localhost:9543/rewindableClock"
-
-source ~/.qmg_secrets
 
 export PATH=~/.npm-global/bin:$PATH
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

@@ -8,6 +8,13 @@
 
 - ⌨️ [iTerm](https://www.iterm2.com/downloads.html)
   - Download and import the [Monokai Remastered](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Monokai%20Remastered.itermcolors) color scheme
+  - On Appearance
+    - On General
+      - Set theme to `minimal`
+    - On Tabs
+      - Disable `Stretch tabs to fill bar`
+    - On Panes
+      - Disable `Show per-pane title bar with split panes`
   - On Profiles
     - For the Default one
       - Set transparency to ~45%
@@ -31,14 +38,16 @@
 
 ### Then
 
+- Create an [ssh-key](https://help.github.com/en/enterprise/2.15/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- Add it to [Github](https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account)
 - 🖨 Clone the repo
 
-- Symlink in home directory 🏠 📂:
+- Symlink in home directory (`ln -sf /path/to/file /path/to/symlink`) 🏠 📂:
   - `.gitignore_global`
   - `.vimrc`
   - `.zshrc`
   - `~/.oh-my-zsh/themes/robbyrussel.robbyrussell.zsh-theme`
-  - `~/Projects/dotfiles/plugins.vim`
+  - `~/.vim/plugins.vim`
   
   
 ### The end result 🚀
