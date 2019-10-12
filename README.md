@@ -44,6 +44,7 @@
 
 - Symlink in home directory (`ln -sf /path/to/file /path/to/symlink`) 🏠 📂:
   - `.gitignore_global`
+  - `.gitconfig`
   - `.vimrc`
   - `.zshrc`
   - `~/.oh-my-zsh/themes/robbyrussel.robbyrussell.zsh-theme`
