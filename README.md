@@ -28,7 +28,7 @@
 
 - 💅 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) 
 
-- 📦 [Vim Vundle](https://github.com/VundleVim/Vundle.vim)
+- 📦 [Vim Plug](https://github.com/junegunn/vim-plug)
 
 - 🍺 [Homebrew](https://brew.sh/)
 
