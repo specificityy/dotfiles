@@ -10,12 +10,25 @@ set noerrorbells visualbell t_vb=
 
 "-----------Visuals-----------
 syntax on
-set background=dark
-set termguicolors
+"" set one or the other""""""
+"set termguicolors
+set t_Co=256
+"""""""""""""""""""""""""""""
+
 colorscheme material-monokai
-let g:materialmonokai_italic=1
-let g:materialmonokai_subtle_spell=1 " Enable subtle Spell highlighting:
-let g:materialmonokai_custom_lint_indicators=0 " Disable the custom ALE indicators if you want to set your own or like the default ones
+
+"set background=dark
+"  override background=dark
+highlight Normal guibg=black guifg=white 
+
+" set transparent vim background, then you can regulate with terminal
+" transparency
+hi Normal guibg=NONE ctermbg=NONE
+
+""""""" material-monokai colorscheme
+ let g:materialmonokai_italic=1
+ let g:materialmonokai_subtle_spell=1 " Enable subtle Spell highlighting:
+ let g:materialmonokai_custom_lint_indicators=0 " Disable the custom ALE indicators if you want to set your own or like the default ones
 
 let g:one_allow_italics = 1     "Italic for comments
 
@@ -25,11 +38,11 @@ set guifont=Menlo:h14
 " set guioptions-=e           "Disables GUI tabs
 
 set linespace=8               "Macvim-specific line-height
-set tabstop=2                  "Set tab to 2 spaces
-set expandtab									 "Set tab to spaces
-set softtabstop=2
-set shiftwidth=2               "for when indenting with '>', use 2 spaces width
-set clipboard=unnamed          "Be able to use normal copy/paste on Visual and Normal mode
+set tabstop=4                  "Set tab to 4 spaces
+set expandtab				   "Set tab to spaces
+set softtabstop=4
+set shiftwidth=4               "for when indenting with '>', use 4 spaces width
+set clipboard=unnamedplus      "Be able to use normal copy/paste on Visual and Normal mode
 "set noexpandtab               "No expand tabs
 set wildignore=*.swp,*.swo     "Files matching these patterns are ignored when completing file or directory names,
                                "and influences the result of expand(), glob() and globpath() unless a flag is passed to disable this.
@@ -73,8 +86,13 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "Make NERDTree easier to toggle
-nmap <D-1> :NERDTreeToggle<cr>
-nmap <D-r> :NERDTreeFind<cr>
+" Mac
+" nmap <D-1> :NERDTreeToggle<cr>
+" nmap <D-r> :NERDTreeFind<cr>
+
+" Linux/Windows
+nmap <C-a> :NERDTreeToggle<cr>
+nmap <C-g> :NERDTreeFind<cr>
 
 "Format the whole document and go back to prev cursor position
 nmap <silent> <Leader>f mj gg V G = 'j :delmarks j<cr>

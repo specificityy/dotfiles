@@ -101,5 +101,16 @@ alias aggs_playground_enquiry="cd ~/Projects/dooku; ./quote | xmllint --xpath 's
 alias drstrange="curl -X PUT --data 'P2D' http://localhost:9543/rewindableClock"
 alias drstrange_rollback="curl -X PUT --data 'P0D' http://localhost:9543/rewindableClock"
 
+# for ubuntu
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 export PATH=~/.npm-global/bin:$PATH
+
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"

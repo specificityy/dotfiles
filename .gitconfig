@@ -5,7 +5,7 @@
 	ui = auto
 [core]
 	editor = vim
-	excludesfile = /Users/wilson.jimenez/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	whitespace = trailing-space,-space-before-tab,tab-in-indent,cr-at-eol
 [credential]
 [alias]

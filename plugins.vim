@@ -34,6 +34,8 @@ Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'skielbasa/vim-material-monokai'
 Plugin 'phanviet/vim-monokai-pro'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'rainglow/vim'
+Plugin 'patstockwell/vim-monokai-tasty'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
